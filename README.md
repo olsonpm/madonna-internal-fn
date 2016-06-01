@@ -40,8 +40,6 @@ mfn({ name: { phil: "objects don't pass" } });
        is used to validate the arguments in calls to the returned function.
    - **fn**: `require` `isFunction`
      - The function which will be called after the arguments have been validated.
-   - **ctx**: `isDefined`
-     - Defaulting to undefined, the 'this' value `fn` will be called with.
    - **name**: `isLadenString`
      - If supplied, the name property of `fn` will be set to this.
  - Returns a function which validates its arguments against **marg** before

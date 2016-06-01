@@ -45,7 +45,7 @@ describe('madonnaFn', () => {
     err.id.should.equal(errorIds.missingRequiredKeys);
     err = undefined;
 
-    try { validatedNoop({ name: { notALadenString: 'fail' } }); }
+    try { validatedNoop({ name: 1 }); }
     catch(e) { err = e; }
     err.id.should.equal(errorIds.criterionFailed);
   });

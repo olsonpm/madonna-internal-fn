@@ -15,13 +15,12 @@ mfn({ name: 'phil' });
 // prints
 // { name: 'phil' }
 
-mfn({ name: { phil: "objects don't pass" } });
+// madonna-fp validation errors are thrown when invalid arguments are passed
+mfn({ name: 1 });
 // prints
 // Invalid Input: The following arguments didn't pass their criterion
 // invalid arguments and values: {
-//   "name": {
-//     "phil": "objects don't pass"
-//   }
+//   "name": 1
 // }
 // failed criterion per argument: {
 //   "name": {
@@ -40,7 +39,5 @@ mfn({ name: { phil: "objects don't pass" } });
        is used to validate the arguments in calls to the returned function.
    - **fn**: `require` `isFunction`
      - The function which will be called after the arguments have been validated.
-   - **name**: `isLadenString`
-     - If supplied, the name property of `fn` will be set to this.
  - Returns a function which validates its arguments against **marg** before
    applying them to **fn**.

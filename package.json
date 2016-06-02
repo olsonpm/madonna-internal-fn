@@ -18,7 +18,7 @@
   "homepage": "https://github.com/olsonpm/madonna-internal-fn#readme",
   "dependencies": {
     "lodash": "^4.13.1",
-    "madonna-fp": "github:olsonpm/madonna-fp#cc710584af61e91f52325052e97249d779d0ae94"
+    "madonna-fp": "github:olsonpm/madonna-fp#5eafaeba1033ffdbf0a8f956d0c7ac968bc843b8"
   },
   "devDependencies": {
     "chai": "^3.5.0",

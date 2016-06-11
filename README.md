@@ -4,11 +4,12 @@ this library does is create a function with validated arguments.
 
 ## Example
 ```js
-const validatedName = argsObj => console.dir(argsObj)
+const madonnaFn = require('madonna-internal-function')
+  , printArg = arg => console.dir(arg);
 
 const mfn = madonnaFn({
   marg: { name: ['require', 'isLadenString'] }
-  , fn: validatedName
+  , fn: printArg
 });
 
 mfn({ name: 'phil' });
@@ -32,8 +33,8 @@ mfn({ name: 1 });
 ```
 
 ## API
-`require('madonnaFn')`
- - Takes the following arguments
+`require('madonna-internal-function')`
+ - Exposes a function that takes the following arguments
    - **marg**: `require` `isLadenPlainObject`
      - marg stands for 'madonna-fp argument'.  It is passed to madonna-fp which
        is used to validate the arguments in calls to the returned function.

@@ -2,6 +2,10 @@
 Internal means this library is only meant for madonna library consumption. All
 this library does is create a function with validated arguments.
 
+**Tested against**
+ - node 0.10.0 for the (default) es5 version
+ - node 4.0.0 for es6 @ `require('madonna-fp/es6')`
+
 ## Example
 ```js
 const madonnaFn = require('madonna-internal-function')

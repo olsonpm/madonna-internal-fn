@@ -7,8 +7,8 @@
 
 const chai = require('chai')
   , fp = require('lodash/fp')
-  , madonna = require('madonna-fp')
-  , madonnaFn = require('../lib');
+  , madonna = require('madonna-fp/es6')
+  , madonnaFn = require('../es6');
 
 
 //------//

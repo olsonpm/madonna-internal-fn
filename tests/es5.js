@@ -56,8 +56,8 @@ module.exports =
 
 	var chai = __webpack_require__(/*! chai */ 1),
 	    fp = __webpack_require__(/*! lodash/fp */ 2),
-	    madonna = __webpack_require__(/*! madonna-fp */ 3),
-	    madonnaFn = __webpack_require__(/*! ../lib */ 4);
+	    madonna = __webpack_require__(/*! madonna-fp/es6 */ 3),
+	    madonnaFn = __webpack_require__(/*! ../es6 */ 4);
 
 	//------//
 	// Init //
@@ -127,64 +127,21 @@ module.exports =
 
 /***/ },
 /* 3 */
-/*!*****************************!*\
-  !*** external "madonna-fp" ***!
-  \*****************************/
+/*!*********************************!*\
+  !*** external "madonna-fp/es5" ***!
+  \*********************************/
 /***/ function(module, exports) {
 
-	module.exports = require("madonna-fp");
+	module.exports = require("madonna-fp/es5");
 
 /***/ },
 /* 4 */
-/*!**********************!*\
-  !*** ./lib/index.js ***!
-  \**********************/
-/***/ function(module, exports, __webpack_require__) {
+/*!*************************!*\
+  !*** external "../es5" ***!
+  \*************************/
+/***/ function(module, exports) {
 
-	'use strict';
-
-	//---------//
-	// Imports //
-	//---------//
-
-	var fp = __webpack_require__(/*! lodash/fp */ 2),
-	    madonna = __webpack_require__(/*! madonna-fp */ 3);
-
-	//------//
-	// Init //
-	//------//
-
-	var madonnaFnArgsValidator = madonna.createIdentityValidator(getMadonnaFnMarg());
-
-	//------//
-	// Main //
-	//------//
-
-	function madonnaFn(argsObj) {
-	  madonnaFnArgsValidator.apply(null, arguments);
-
-	  var fnArgsValidator = madonna.createIdentityValidator(argsObj.marg),
-	      res = fp.flow(fnArgsValidator, argsObj.fn);
-
-	  return res;
-	}
-
-	//-------------//
-	// Helper Fxns //
-	//-------------//
-
-	function getMadonnaFnMarg() {
-	  return {
-	    marg: ['require', 'isLadenPlainObject'],
-	    fn: ['require', 'isFunction']
-	  };
-	}
-
-	//---------//
-	// Exports //
-	//---------//
-
-	module.exports = madonnaFn;
+	module.exports = require("../es5");
 
 /***/ }
 /******/ ]);

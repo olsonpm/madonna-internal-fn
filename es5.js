@@ -55,7 +55,7 @@ module.exports =
 	//---------//
 
 	var fp = __webpack_require__(/*! lodash/fp */ 1),
-	    madonna = __webpack_require__(/*! madonna-fp */ 2);
+	    madonna = __webpack_require__(/*! madonna-fp/es6 */ 2);
 
 	//------//
 	// Init //
@@ -104,12 +104,12 @@ module.exports =
 
 /***/ },
 /* 2 */
-/*!*****************************!*\
-  !*** external "madonna-fp" ***!
-  \*****************************/
+/*!*********************************!*\
+  !*** external "madonna-fp/es5" ***!
+  \*********************************/
 /***/ function(module, exports) {
 
-	module.exports = require("madonna-fp");
+	module.exports = require("madonna-fp/es5");
 
 /***/ }
 /******/ ]);
